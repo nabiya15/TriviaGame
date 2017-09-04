@@ -4,8 +4,15 @@ $('.main-section').append($('<button/>',{
 	text:'Start',
 	id: 'startButton',
 	click:showQuiz
-}
-));
+}).css({
+		 	'background':'lightgrey',
+		 	'height':'100px',
+		 	'width':'300px',
+		 	'border-radius':'10px',
+		 	'color':'#474545',
+		 	'font-size':'40px',
+
+		 }));
 var time = 60;
 var intervalID;
 function runTimer(){
@@ -18,6 +25,7 @@ function timer(){
 		stopTimer();
 		$('.showDiv').hide();
 		checkAnswers();
+		$('.timer').hide();
 	}
 }
 function stopTimer(){
@@ -49,7 +57,7 @@ function showQuiz(){
 	 	}
 	 	// store the question and answer to display array
 	 
-	 	display.push('<div class="question'+(i+1)+'"> <h4>'+(i+1)+'. '+quiz[i].question+'</h4> </div>'+'<div class="answers">'+answer.join('')+'</div>');	
+	 	display.push('<div class="question'+(i+1)+'"> <h4>'+(i+1)+'. '+quiz[i].question+'</h4> </div>'+'<div class="answers">'+answer.join('')+'</div><br>');	
 	 	//display the display array on html
 	 }
 	 	$('.showDiv').html(display);
@@ -59,12 +67,20 @@ function showQuiz(){
 		 	text:"Check Answers",
 		 	id:"checkButton",
 		 	click: checkAnswers
+		 }).css({
+		 	'background':'#474545',
+		 	'height':'45px',
+		 	'width':'200px',
+		 	'border-radius':'10px',
+		 	'color':'lightgrey',
+		 	'font-size':'20px',
 		 }));
 	}
 
 function checkAnswers(){
 	stopTimer();
 	$('.showDiv').hide();
+	$('.timer').hide();
 	var answerChoices= document.querySelectorAll('.answers');
 	var userAnswer='';
 	var correct=0;
