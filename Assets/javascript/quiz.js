@@ -57,6 +57,40 @@ var quiz=[
 
 		} ,
 		answer:	'B'	
+	},
+
+	{
+		question: 'When a user views a page containing a JavaScript program, which machine actually executes the script?',
+		options:{	
+			A : "The User's machine running a Web browser",
+			B : 'The Web server',
+			C :  "A central machine deep within Netscape's corporate offices",
+			D : 'None of the above'
+		},
+		answer:  'A'
+	},
+
+	{
+		question: 'What are variables used for in JavaScript Programs?',
+		options:{	
+			A : 'Storing numbers, dates, or other values',
+			B : 'Varying randomly',
+			C : 'Causing high-school algebra flashbacks',
+			D :  'None of the above'
+		},
+		answer : 'A'
+	},
+
+	{
+		question: 'What method evaluates a string of JavaScript code in the context of the specified object.',
+		options:{	
+			A :  'ParseFloat',
+			B :  'ParseInt',
+			C :  'Eval',
+			D :  'Efloat'
+		},
+		answer: 'C'
+
 	}
 
 	];

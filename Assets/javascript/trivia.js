@@ -5,11 +5,11 @@ $('.main-section').append($('<button/>',{
 	id: 'startButton',
 	click:showQuiz
 }).css({
-		 	'background':'lightgrey',
+		 	'background':'#474545',
 		 	'height':'100px',
-		 	'width':'300px',
+		 	'width':'55%',
 		 	'border-radius':'10px',
-		 	'color':'#474545',
+		 	'color':'lightgrey',
 		 	'font-size':'40px',
 
 		 }));
